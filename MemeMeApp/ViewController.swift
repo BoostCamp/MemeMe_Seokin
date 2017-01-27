@@ -98,12 +98,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
        dismiss(animated: true, completion: nil)
      }
     
-    struct Meme{
-        var topText: String
-        var bottomText: String
-        var originalImage: UIImage
-        var memdImage: UIImage
-    }
+    
     
     func generateMemedImage()->UIImage{
         UIGraphicsBeginImageContext(self.view.frame.size)
@@ -122,10 +117,20 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBAction func save(){
         let memedImage = generateMemedImage()
-        //let meme = Meme(topText: topLabel.text!, bottomText: bottomLabel.text!, originalImage: imagePickerView.image!, memdImage: memedImage)
+        let meme = Meme(name: topLabel.text!, topText: topLabel.text!, bottomText: bottomLabel.text!, originalImage: imagePickerView.image!, memedImage: memedImage)
         
         UIImageWriteToSavedPhotosAlbum(memedImage, self, nil, nil)
+        
+        let object = UIApplication.shared.delegate
+        let appDelegate = object as! AppDelegate
+        appDelegate.memes.append(meme)
+        //dismiss(animated: true, completion: nil)
     }
-
+/*
+    @IBAction func cancel(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+   }
+ */
 }
 
