@@ -87,7 +87,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
     }
     
-    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
        print("\(info)")
         
@@ -96,9 +95,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             shareButton.isEnabled = true
        }
        dismiss(animated: true, completion: nil)
-     }
-    
-    
+    }
     
     func generateMemedImage()->UIImage{
         UIGraphicsBeginImageContext(self.view.frame.size)
@@ -126,11 +123,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         appDelegate.memes.append(meme)
         //dismiss(animated: true, completion: nil)
     }
-/*
-    @IBAction func cancel(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
-   }
- */
+    
+    
 }
 

@@ -9,6 +9,7 @@
 import UIKit
 
 class MemeTableViewController: UITableViewController {
+    var memes: [Meme]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,23 +17,24 @@ class MemeTableViewController: UITableViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.memes.append( Meme(name: "TestImg", topText: "Test", bottomText: "Image", originalImage: #imageLiteral(resourceName: "testimg"), memedImage: #imageLiteral(resourceName: "testimg")) )
          */
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        memes = appDelegate.memes
+        
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        return appDelegate.memes.count
+        return memes.count
     }
     
    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "MemeCell")!
-    
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let meme = appDelegate.memes[ (indexPath as NSIndexPath).row ]
+        let meme = memes[ (indexPath as NSIndexPath).row ]
         print( (indexPath as NSIndexPath).row )
         // Set the name and image
-        cell.textLabel?.text = meme.name
+        cell.textLabel?.text = meme.topText
         cell.imageView?.image = meme.memedImage
+        cell.detailTextLabel?.text = meme.bottomText
         
         // If the cell has a detail label, we will put the evil scheme in.
         /*if let detailTextLabel = cell.detailTextLabel {
@@ -41,13 +43,12 @@ class MemeTableViewController: UITableViewController {
         
         return cell
     }
-    /*
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let detailController = self.storyboard!.instantiateViewController(withIdentifier: "VillainDetailViewController") as! VillainDetailViewController
-        detailController.villain = self.allVillains[(indexPath as NSIndexPath).row]
+        let detailController = self.storyboard!.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        detailController.meme = memes[(indexPath as NSIndexPath).row]
         self.navigationController!.pushViewController(detailController, animated: true)
-    }*/
+    }
 }
 
 
