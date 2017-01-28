@@ -11,6 +11,7 @@
 		350B4EC51E3B17C900F6E84E /* MemeCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350B4EC41E3B17C900F6E84E /* MemeCollectionView.swift */; };
 		350B4EC71E3B2BA100F6E84E /* MemeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350B4EC61E3B2BA100F6E84E /* MemeTableView.swift */; };
 		350B4EC91E3BA01E00F6E84E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350B4EC81E3BA01E00F6E84E /* DetailViewController.swift */; };
+		35413AE41E3C6FAD00ABAC70 /* FavoriteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35413AE31E3C6FAD00ABAC70 /* FavoriteTableViewController.swift */; };
 		35E149711E30AB84002F7D2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E149701E30AB84002F7D2F /* AppDelegate.swift */; };
 		35E149731E30AB84002F7D2F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E149721E30AB84002F7D2F /* ViewController.swift */; };
 		35E149761E30AB84002F7D2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35E149741E30AB84002F7D2F /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 		350B4EC41E3B17C900F6E84E /* MemeCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeCollectionView.swift; sourceTree = "<group>"; };
 		350B4EC61E3B2BA100F6E84E /* MemeTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeTableView.swift; sourceTree = "<group>"; };
 		350B4EC81E3BA01E00F6E84E /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		35413AE31E3C6FAD00ABAC70 /* FavoriteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewController.swift; sourceTree = "<group>"; };
 		35E1496D1E30AB84002F7D2F /* MemeMeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemeMeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35E149701E30AB84002F7D2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35E149721E30AB84002F7D2F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				35E149721E30AB84002F7D2F /* ViewController.swift */,
 				350B4EC61E3B2BA100F6E84E /* MemeTableView.swift */,
 				350B4EC41E3B17C900F6E84E /* MemeCollectionView.swift */,
+				35413AE31E3C6FAD00ABAC70 /* FavoriteTableViewController.swift */,
 				350B4EC81E3BA01E00F6E84E /* DetailViewController.swift */,
 				35E149741E30AB84002F7D2F /* Main.storyboard */,
 				35E149771E30AB84002F7D2F /* Assets.xcassets */,
@@ -108,6 +111,7 @@
 				TargetAttributes = {
 					35E1496C1E30AB83002F7D2F = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 446SPWE29H;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -154,6 +158,7 @@
 				350B4EC91E3BA01E00F6E84E /* DetailViewController.swift in Sources */,
 				35E149731E30AB84002F7D2F /* ViewController.swift in Sources */,
 				35E149711E30AB84002F7D2F /* AppDelegate.swift in Sources */,
+				35413AE41E3C6FAD00ABAC70 /* FavoriteTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +281,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 446SPWE29H;
 				INFOPLIST_FILE = MemeMeApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.boostcamp.MemeMeApp;
@@ -288,6 +294,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 446SPWE29H;
 				INFOPLIST_FILE = MemeMeApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.boostcamp.MemeMeApp;

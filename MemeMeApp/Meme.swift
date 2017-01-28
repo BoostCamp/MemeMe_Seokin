@@ -10,10 +10,12 @@ import Foundation
 import UIKit
 
 struct Meme{
+    var id: Int
     var name: String
     var topText: String
     var bottomText: String
     var originalImage: UIImage
     var memedImage: UIImage
+    var isFavorite: Bool
 }
 

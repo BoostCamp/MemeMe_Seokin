@@ -13,11 +13,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var memes = [Meme]()
-
+    var memeCount: Int?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        memes.append( Meme(name: "TestImg", topText: "Test", bottomText: "Image", originalImage: #imageLiteral(resourceName: "testimg"), memedImage:#imageLiteral(resourceName: "testimg")) )
+        memes.append( Meme(id:0, name: "TestImg", topText: "Test", bottomText: "Image", originalImage: #imageLiteral(resourceName: "testimg"), memedImage:#imageLiteral(resourceName: "testimg"), isFavorite: false) )
+        memeCount = 0
         return true
     }
 
